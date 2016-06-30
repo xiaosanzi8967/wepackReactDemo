@@ -1,6 +1,6 @@
 var React = require("react") ;
 var Loading = require("app/components/loading");
-var Alert = require("app/components/Alert") ;
+//var Alert = require("app/components/Alert") ;
 Loading.show();
 /*setTimeout(function(){
 	Alert.show({
@@ -18,11 +18,23 @@ Loading.show();
 
 var Dialog = require("app/components/Dialog");
 
-Dialog.show({
+var mydialog = new Dialog({
 	title:"删除确认",
 	content:'确定要删除吗？',
-	container:document.getElementById('dialog')
-});
+	container:document.getElementById('dialog'),
+	buttons:[{
+		btnName:'我知道了',
+		className:"default",
+		callback:function(){
+			alert("dddddddd")
+		}
+	}],
+	confirm:function(){
+		window.alert("confim");
+		mydialog.destroy();
+	}
+})
+mydialog.show();
 
 
 

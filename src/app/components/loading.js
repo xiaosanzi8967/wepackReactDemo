@@ -35,7 +35,7 @@ var Loading = React.createClass ({
 }) ;
 
 function loading(container){
-	this.container = container || document.body ;
+	this.container = container || document.getElementById("loading") ;
 }
 
 loading.prototype.show = function(content){
