@@ -1,0 +1,819 @@
+@import '../_variables.less';
+//工作日报类型
+.dailyreport-none-box {
+    position: relative;
+    .dailyreport-none-bgImage {
+        width: 314 / 100rem;
+        height: 228 / 100rem;
+        background: url('../../images/dailyreport/none.png') no-repeat center center;
+        background-size: 100%;
+        margin: 0 auto;
+        margin-top: 180 / 100rem;
+    }
+    p {
+        font-size: 28 / 100rem;
+        color: #8f8e8e;
+        text-align: center;
+        margin-top: 70 / 100rem;
+    }
+}
+
+.reportTypeListBox {
+    padding: 0 20/100rem;
+    .reportTypeList {
+        font-size: 32 / 100rem;
+        margin-bottom: -1px;
+        li {
+            a {
+                display: block;
+                position: relative;
+                height: 98 / 100rem;
+                line-height: 98 / 100rem;
+                color: #333;
+                i {
+                    position: absolute;
+                    width: 16 / 100rem;
+                    height: 28 / 100rem;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -14 / 100rem;
+                    img {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.no_top_border.dailyreport-hr {
+    border-top: none;
+}
+
+.dailyreport-hr {
+    border-bottom: 1px solid @hr-border-color;
+    border-top: 1px solid @hr-border-color;
+}
+
+.dailyreport-list-item {
+    margin-bottom: 20 / 100rem;
+    background: @body-background-color;
+}
+
+.dailyreport-input-height {
+    height: 98 / 100rem;
+    line-height: 98 / 100rem;
+}
+
+.dailyreport-input-tab {
+    padding: 0 20 / 100rem;
+}
+
+.dailyreport-box {
+    textarea {
+        padding: 0;
+        padding-top: 16 / 100rem;
+    }
+    input[type='text'],
+    input[type='number'],
+    input[type='date'],
+    input[type='time'],
+    input[type='datetime-local'] {
+        border: 0;
+        height: 0.48rem;
+        line-height: 0.48rem;
+        padding: 0;
+        margin: 0.25rem 0;
+        box-sizing: content-box;
+        font-size: 0.32rem;
+        width: 100%;
+        display: block;
+    }
+    .daily-table-cell3 {
+        height: 30 / 100rem;
+    }
+    .daily-table-cell2 {
+        height: 20 / 100rem;
+    }
+    .daily-table-cell1 {
+        height: 10 / 100rem;
+    }
+    .cs-daily-box {
+        border-top: 0;
+        border-bottom: 1px solid @hr-border-color;
+        background: #fff;
+    }
+    .dailyreport-tpl-remarks {
+        font-size: 26 / 100rem;
+        color: #999;
+        text-align: center;
+        padding: 36 / 100rem;
+    }
+}
+
+.daily-title-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dailyreport-radio li,
+.dailyreport-chk li {
+    height: 40 / 100rem;
+    line-height: 40 / 100rem;
+    .dxk-box {
+        position: relative;
+        padding-left: 40 / 100rem;
+        font-size: 28 / 100rem;
+        float: left;
+        b {
+            position: absolute;
+            width: 28 / 100rem;
+            height: 28 / 100rem;
+            border: 1px solid #ccc;
+            left: 0px;
+            top: 6 / 100rem;
+            &.is-radios {
+                border-radius: 50%;
+            }
+            &.c-current {
+                background: #1fafff url('../../images/dailyreport/sure.png') no-repeat center center;
+                background-size: 90%;
+                border: 1px solid #1fafff;
+            }
+        }
+    }
+}
+
+.dailyreport-btn-ui {
+    text-align: center;
+    margin-top: 40 / 100rem;
+    &.daily-detial-page {
+        margin: 40 / 100rem 0;
+    }
+    .dailyreport-btn {
+        display: inline-block;
+        width: 43%;
+        height: 80 / 100rem;
+        line-height: 80 / 100rem;
+        padding: 0 4%;
+        a {
+            display: block;
+            width: 100%;
+            color: #333;
+            background: #fff;
+            border-radius: 4px;
+            font-size: 36 / 100rem;
+            border: 1px solid #e8e8e8;
+            &.dailyreport-save {
+                display: inline-block;
+                color: #fff;
+                background-color: #1eafff;
+                border-color: #1eafff;
+            }
+        }
+    }
+}
+
+.dailyreport-list-title {
+    bottom: 0;
+    overflow: hidden;
+}
+
+.dailyr-res-list {
+    background: @body-background-color;
+    position: relative;
+    ul {
+        margin: 0 20 / 100rem;
+        margin-bottom: -1px;
+    }
+    li {
+        padding: 25 / 100rem 0;
+        position: relative;
+        .daily-list-goto {
+            position: absolute;
+            width: 16 / 100rem;
+            height: 28 / 100rem;
+            background: url('../../images/dailyreport/icon-arrow-right-goto.png') no-repeat;
+            right: 0;
+            top: 50%;
+            margin-top: -14 / 100rem;
+            background-size: 100%;
+        }
+    }
+    .daily-person-photo {
+        float: left;
+        width: 70 / 100rem;
+        height: 70 / 100rem;
+        margin-right: 10 / 100rem;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+}
+
+.daily-res-info {
+    float: left;
+    width: 80%;
+    p.daily-res-title {
+        position: relative;
+    }
+    .daily-list-zf {
+        width: 20 / 100rem;
+        height: 18 / 100rem;
+        background: url('../../images/dailyreport/zf.png') no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        margin-top: -9 / 100rem;
+    }
+    .daily-list-wd {
+        width: 18 / 100rem;
+        height: 18 / 100rem;
+        background: #1eafff;
+        border-radius: 50%;
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        margin-top: -9 / 100rem;
+    }
+    .daily-list-time {
+        color: #999;
+        font-size: 24 / 100rem;
+        display: block;
+        height: 25 / 100rem;
+        line-height: 25 / 100rem;
+        margin-top: 8 / 100rem;
+        font-style: normal;
+    }
+    span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    span.info-is-icon {
+        padding-left: 30 / 100rem;
+    }
+}
+
+.dailyreport-searchType {
+    li {
+        width: 45% !important;
+    }
+}
+
+.daily-detail-msgbox {
+    margin-bottom: 20 / 100rem;
+    padding: 20 / 100rem;
+    background: @body-background-color;
+    /*border-bottom: 1px solid #d5d5d5;*/
+    position: relative;
+    padding-left: 140 / 100rem;
+    .daily-detail-photo {
+        position: absolute;
+        left: 20 / 100rem;
+        top: 20 / 100rem;
+        width: 96 / 100rem;
+        height: 96 / 100rem;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    .daily-detail-msg {
+        float: left;
+        p {
+            font-size: 40 / 100rem;
+            margin-top: 7 / 100rem;
+            line-height: 46 / 100rem;
+        }
+        span {
+            display: block;
+            font-size: 26 / 100rem;
+            margin-top: 8 / 100rem;
+            color: #777777;
+        }
+    }
+}
+
+.dailyreport-ischk-box {
+    width: 52 / 100rem;
+    float: left;
+    height: 70 / 100rem;
+    line-height: 70 / 100rem;
+}
+
+.dailyreport-ischk {
+    width: 34 / 100rem;
+    height: 34 / 100rem;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #bcbcbc;
+    &.ischk-current {
+        border: 1px solid #1ab0ff;
+        background: #1ab0ff url('../../images/dailyreport/sure.png') no-repeat center center;
+        background-size: 80%;
+    }
+}
+
+.dailyreport-dels-box {
+    height: 80 / 100rem;
+    width: 100%;
+    border-top: 1px solid #d6d6d6;
+    background-color: #fff;
+    position: fixed;
+    botom: -80 / 100rem;
+    -webkit-transition: all 0.3s ease;
+    text-align: right;
+    .dailyreport-dels-btn {
+        display: inline-block;
+        width: 128 / 100rem;
+        height: 54 / 100rem;
+        line-height: 54 / 100rem;
+        border-radius: 3px;
+        text-align: center;
+        border: 1px solid;
+        margin-top: 12 / 100rem;
+        &.dailyreport-dels-cancel {
+            border-color: #aaa;
+            color: #666666;
+        }
+        &.dailyreport-dels-sure {
+            border-color: #f0474e;
+            color: #f0474e;
+            margin: 0 20 / 100rem;
+        }
+    }
+}
+
+.dailyreport-dels {
+    bottom: 0;
+}
+
+.dailyreport-warn {
+    border-radius: 6px;
+    .dailyreport-warn-area {
+        padding: 44 / 100rem;
+        p {
+            line-height: 50 / 100rem;
+        }
+    }
+}
+
+.daiyreport-more-height {
+    height: 98 / 100rem;
+}
+
+.dailyreport-isRead {
+    font-size: 22 / 100rem;
+    position: absolute;
+    width: 60 / 100rem;
+    height: 28 / 100rem;
+    line-height: 28 / 100rem;
+    border-radius: 24 / 100rem;
+    right: 2px;
+    background: #00b371;
+    color: #fff;
+    text-align: center;
+    top: 5px;
+}
+
+.dailyreport-uptodown {
+    background: #fff;
+    padding: 0 20 / 100rem;
+    margin-bottom: 20 / 100rem;
+    dt {
+        color: #333;
+        padding: 30 / 100rem 0;
+        width: 100%;
+        p {
+            line-height: 38 / 100rem;
+            font-size: 32 / 100rem;
+        }
+    }
+    dd {
+        font-size: 30 / 100rem;
+        padding: 25 / 100rem 0;
+        .t-area {
+            line-height: 40 / 100rem;
+            color: #666;
+        }
+        .t-images-box {
+            li {
+                float: left;
+                width: 33.333333%;
+                height: 170 / 100rem;
+                margin-bottom: 10 / 100rem;
+            }
+            li {
+                padding: 0 2.5%;
+                box-sizing: border-box;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .dailyreport-chk-box {
+            position: relative;
+            padding-left: 40 / 100rem;
+            i {
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-family: "iconfont" !important;
+                font-style: normal;
+                color: #34b4ff;
+            }
+            p {
+                line-height: 36 / 100rem;
+            }
+        }
+    }
+}
+
+.dailyreport-ltor {
+    background-color: #fff;
+    padding: 30 / 100rem 20 / 100rem;
+    margin-bottom: 20 / 100rem;
+    position: relative;
+    .dailyreport-ltor-l {
+        /*float: left; */
+        /* width: 255 / 100rem;*/
+        color: #333;
+        font-size: 32 / 100rem;
+    }
+    .dailyreport-ltor-r {
+        position: absolute;
+        right: 20 / 100rem;
+        top: 55%;
+        height: 40 / 100rem;
+        margin-top: -20 / 100rem;
+    }
+}
+
+.dailyreport-forward {
+    height: 80 / 100rem;
+    background-color: #20affe;
+    color: #fff;
+    padding: 0 20 / 100rem;
+    line-height: 80 / 100rem;
+    span {
+        float: left;
+    }
+    a {
+        float: right;
+        color: #fff;
+        i {
+            font-family: "iconfont" !important;
+            font-style: normal;
+        }
+    }
+}
+
+.daily-trajectory-box {
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    .daily-trajectory-title {
+        height: 80 / 100rem;
+        line-height: 80 / 100rem;
+        text-align: center;
+        background-color: #f4f4f4;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+        i {
+            position: absolute;
+            right: 28 / 100rem;
+            font-family: "iconfont" !important;
+            font-style: normal;
+        }
+    }
+}
+
+.dailyreport-commentTitle {
+    /* border-bottom: 1px solid #d5d5d5;*/
+    padding: 30 / 100rem 0;
+    width: 100%;
+    line-height: 38 / 100rem;
+    font-size: 32 / 100rem;
+}
+
+.daily-trajectory-content {
+    padding-left: 130 / 100rem;
+    position: absolute;
+    top: 0.8rem;
+    bottom: 0;
+    width: 100%;
+    .daily-trajectory-dom {
+        border-left: 1px solid #d9d9d9;
+        .time-node {
+          margin-top: 70/100rem;
+        }
+        dt {
+            padding-left: 20 / 100rem;
+            height: 62 / 100rem;
+            line-height: 62 / 100rem;
+            color: #333;
+            text-align: left;
+            margin-top: 30 / 100rem;
+            position: relative;
+            .traje-send-time {
+                font-size: 22 / 100rem;
+                position: absolute;
+                right: 100%;
+                white-space: nowrap;
+                line-height: 36 / 100rem;
+                text-align: right;
+                margin-right: 14 / 100rem;
+                top: 0.05rem;
+                b {
+                    display: block;
+                    line-height: 16 / 100rem;
+                    color: #999;
+                }
+                i {
+                    display: block;
+                    font-style: normal;
+                }
+            }
+        }
+        dd {
+            padding-left: 30 / 100rem;
+            ul {
+                margin-left: -30 / 100rem;
+                li {
+                    width: auto;
+                }
+            }
+            li {
+                float: left;
+                /*max-width: 4em;*/
+                margin-top: 10 / 100rem;
+                margin-left: 30 / 100rem;
+            }
+            p {
+                width: 70 / 100rem;
+                height: 70 / 100rem;
+                display: inline-block;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+            span {
+                display: block;
+                height: 42 / 100rem;
+                line-height: 42 / 100rem;
+                font-size: 24 / 100rem;
+                color: #666;
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                word-break: keep-all;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    .daily-trajectory-list {
+        .daily-trajectory-point {
+            position: absolute;
+            height: 16 / 100rem;
+            width: 16 / 100rem;
+            background-color: #dedede;
+            left: -10 / 100rem;
+            top: 50%;
+            margin-top: -10 / 100rem;
+            border-radius: 50%;
+        }
+    }
+}
+
+.dailyreport-transmit-box {
+    padding: 0 20 / 100rem;
+    background-color: #fff;
+    .dailyreport-transmit-person {
+        padding-left: 110 / 100rem;
+        position: relative;
+        border-bottom: 1px solid #d5d5d5;
+        min-height: 100 / 100rem;
+        padding-right: 85 / 100rem;
+    }
+    .dtrans-title {
+        width: 100 / 100rem;
+        position: absolute;
+        left: 0;
+        top: 34 / 100rem;
+    }
+    .dtrans-add {
+        font-style: normal;
+        color: #bbb;
+        position: absolute;
+        right: 0;
+        top: 34 / 100rem;
+        font-size: 34 / 100rem;
+        font-family: "iconfont" !important;
+    }
+}
+
+.no-comment {
+    color: #999;
+    background-color: #fff;
+    padding: 70/100rem 0;
+}
+
+i.place-box {
+    margin-left: .1rem;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.title-padding {
+    padding: 30/100rem 0 !important;
+}
+
+.border-fix,
+.border-fix-bot {
+    position: relative;
+    background: #fff;
+    z-index: 1;
+}
+
+.border-fix:before {
+    content: " ";
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 0;
+    background: #d5d5d5;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.border-fix:after,
+.border-fix-bot:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #d5d5d5;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.add_font_style {
+    width: auto;
+    height: auto;
+    font-style: normal;
+    font-size: 0.34rem !important;
+    font-family: "iconfont" !important;
+}
+
+.external {
+    overflow-x: hidden;
+}
+
+.ng-scope .reply.pub-float {
+    position: fixed;
+    top: 0;
+}
+.dr-tit{
+    padding: 39/100rem 20/100rem 18/100rem 19/100rem;
+    font-size: 32/100rem;
+    background-color: #f4f4f4;
+    color: #999;
+}
+.dr-tit-1{
+    padding: 30/100rem 20/100rem !important;
+    font-size: 32/100rem;
+    color: #999 !important;
+    background-color: #f4f4f4;
+}
+.dr-cont-1{
+    padding: 34/100rem 20/100rem;
+    background-color: #fff;
+  input[type="text"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"]{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+.dr-cont-2{
+    padding: 34/100rem 20/100rem;
+    textarea{
+      padding: 0;
+    }
+}
+.approve-imp{
+  position: relative;
+  top: 7/100rem;
+  color: #ff735a;
+  margin-left: 3px;
+}
+.no-bot-border{
+    border-bottom: none !important;
+}
+.dr-padding-lr{
+    padding: 0 20/100rem !important;
+}
+.dr-item{
+  background-color: #fff;
+  margin-top: 32/100rem;
+  margin-bottom: 0 !important;
+}
+.dr-lname{
+  display: inline-block;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  font-size: 32/100rem;
+  white-space: nowrap;
+}
+.dr-rcont{
+  display: inline-block;
+  padding-left: 20/100rem;
+}
+.dr-detail-titbox{
+  padding: 29/100rem 20/100rem;
+  background-color: #fff;
+  p{
+    color: #333;
+    font-size: 42/100rem;
+  }
+}
+.dr-detail-photo{
+   width: 74/100rem;
+  height: 74/100rem;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+}
+.dr-tit-wrap{
+    margin-top: 29/100rem;
+ }
+.dr-detail-inf{
+    float: left;
+  font-size: 26/100rem;
+  color: #999;
+  height: 74/100rem;
+  line-height: 1.5em;
+  margin-left: 16/100rem;
+  span{
+    display: block;
+
+  }
+}
+.no-padding{
+  padding: 0 !important;
+}
+.check-item{
+  padding: 20/100rem 20/100rem !important;
+}
+.dailyreport-btn.ckwq{
+  width: 400/100rem;
+}
+.check-row{
+  margin: 25/100rem 0;
+}
+li.fix-h{
+  margin:0 !important;
+  padding: 10/100rem 10/100rem 0 10/100rem;
+  width: 33.333333% !important;
+}
+.dailyreport-uptodown dd .dailyreport-chk-box .check-icon{
+  position: absolute;
+  width: 0.28rem;
+  height: 0.28rem;
+  left: 0;
+  top: 0.03rem;
+  background: url('../../images/dailyreport/check-box-icon.png') no-repeat center center;
+  background-size: 100% 100%;
+}
+.fix-font-size{
+  font-size: 32/100rem;
+}
+.check-item dd{
+   padding-top: 0;
+  padding-bottom: 0;
+}
+
+.dailyreport-warp{
+    word-break : break-all;
+    word-wrap: break-word;
+}

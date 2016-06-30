@@ -1,0 +1,58 @@
+@import "_variables.less";
+@import "mixins/clearfix.less";
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="number"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  color: @gray;
+  padding: @padding-xs-vertical @padding-xs-horizontal;
+  font-size: 32/100rem;
+  border: none;
+  outline: none;
+}
+
+input[type='text'],
+input[type='password'] {
+  background: #fff;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-horizontal {
+
+  .control-label {
+    text-align: left;
+    margin-bottom: 0;
+    padding: unit( (@padding-xs-vertical*2)/100, rem) 16/100rem 0 16/100rem;
+  }
+
+}
+input[type="data"],
+input[type="time"],
+input[type="datetime-local"]{
+  font-size: unit( 24/100, rem);
+}
+
+
+.form-group {
+  margin-bottom: @form-group-margin-bottom;
+  .clearfix();
+}
+

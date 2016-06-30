@@ -1,0 +1,22 @@
+{
+  "name": "dddd",
+  "description": "",
+  "authors": [
+    "liyue <liyue@vchangyi.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "bootstrap": "^3.3.6",
+    "weui": "^0.4.2"
+  }
+}

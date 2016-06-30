@@ -1,0 +1,206 @@
+@media screen and (max-width: 321px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  body {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 19px;
+  }
+}
+/*遮罩层*/
+.mask-layer {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0);
+  z-index: 2;
+}
+.spinner-center {
+  position: fixed;
+  width: 2.5rem;
+  left: 50%;
+  top: 40%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.1rem;
+  padding: 0.3rem 0;
+  text-align: center;
+  font-size: 16px;
+  margin-left: -1.25rem;
+  z-index: 1010;
+}
+@media screen and (max-width: 321px) {
+  .spinner-center {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  .spinner-center {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .spinner-center {
+    font-size: 19px;
+  }
+}
+/*加载更多*/
+.load-warp {
+  padding: 0.16rem 0;
+  text-align: center;
+  cursor: pointer;
+}
+.custom-wrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+.loading-message {
+  color: #fff;
+  padding-top: 0.16rem;
+}
+.disable-scroll {
+  overflow: hidden;
+}
+.loading-horizontal-center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.spinner-cc {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.6rem;
+  height: 0.6rem;
+}
+.spinner-cc div {
+  background-color: white;
+  position: absolute;
+  width: 8%;
+  height: 25%;
+  top: 60%;
+  left: 50%;
+  margin-left: -4.15%;
+  opacity: 0;
+  border-bottom-left-radius: 0.7rem 1.2rem;
+  border-bottom-right-radius: 0.7rem 1.2rem;
+  -webkit-transform-origin: center -80%;
+      -ms-transform-origin: center -80%;
+          transform-origin: center -80%;
+  -webkit-animation: fade 1s linear infinite;
+}
+.spinner-cc div.bar1 {
+  -webkit-transform: rotate(0deg);
+  -webkit-animation-delay: 0s;
+}
+.spinner-cc div.bar2 {
+  -webkit-transform: rotate(30deg);
+  -webkit-animation-delay: -0.9167s;
+}
+.spinner-cc div.bar3 {
+  -webkit-transform: rotate(60deg);
+  -webkit-animation-delay: -0.833s;
+}
+.spinner-cc div.bar4 {
+  -webkit-transform: rotate(90deg);
+  -webkit-animation-delay: -0.75s;
+}
+.spinner-cc div.bar5 {
+  -webkit-transform: rotate(120deg);
+  -webkit-animation-delay: -0.667s;
+}
+.spinner-cc div.bar6 {
+  -webkit-transform: rotate(150deg);
+  -webkit-animation-delay: -0.5833s;
+}
+.spinner-cc div.bar7 {
+  -webkit-transform: rotate(180deg);
+  -webkit-animation-delay: -0.5s;
+}
+.spinner-cc div.bar8 {
+  -webkit-transform: rotate(210deg);
+  -webkit-animation-delay: -0.41667s;
+}
+.spinner-cc div.bar9 {
+  -webkit-transform: rotate(240deg);
+  -webkit-animation-delay: -0.333s;
+}
+.spinner-cc div.bar10 {
+  -webkit-transform: rotate(270deg);
+  -webkit-animation-delay: -0.25s;
+}
+.spinner-cc div.bar11 {
+  -webkit-transform: rotate(300deg);
+  -webkit-animation-delay: -0.1667s;
+}
+.spinner-cc div.bar12 {
+  -webkit-transform: rotate(330deg);
+  -webkit-animation-delay: -0.0833s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.spinner {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 0.4rem;
+  height: 0.4rem;
+}
+.spinner > div {
+  float: left;
+  margin-right: 12%;
+  width: 25%;
+  height: 100%;
+  background: #ea3f2c;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-animation: stretchdelay 1s infinite ease-in-out;
+  animation: stretchdelay 1s infinite ease-in-out;
+}
+.spinner > div:last-child {
+  margin-right: 0;
+}
+.spinner .rect2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.spinner .rect3 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+@-webkit-keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}

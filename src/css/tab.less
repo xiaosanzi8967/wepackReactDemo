@@ -1,0 +1,114 @@
+@import "_variables.less";
+@import "mixins/border-radius.less";
+@import "mixins/border.less";
+@import "mixins/clearfix.less";
+@import "mixins/utilities.less";
+
+.tab-wrap {
+  position: relative;
+  width: 90%;
+  margin: .6rem auto;
+
+  .v-tab {
+
+    overflow: hidden;
+
+    .tab-item {
+      .border-top(@border-width, solid, @tab-border-color);
+      .border-bottom(@border-width, solid, @tab-border-color);
+      .border-left(@border-width, solid, @tab-border-color);
+      .border-right(@border-width, solid, @tab-border-color);
+      overflow: hidden;
+
+      &.active{
+        background: @tab-active-color;
+      }
+
+      &.active a{
+        color: @gray-lighter;
+        background: @tab-active-color;
+      }
+
+    }
+
+    .tab-item:first-child {
+      .border-left(@border-width, solid, @tab-border-color);
+      border-right: none;
+      .border-left-radius(20/100rem);
+
+      a{
+        .border-left-radius(20/100rem);
+      }
+    }
+
+    .tab-item:last-child {
+      .border-right(@border-width, solid, @tab-border-color);
+      border-left: none;
+      .border-right-radius(20/100rem);
+
+      a{
+        .border-right-radius(20/100rem);
+      }
+    }
+
+    .tab-item a{
+      display: block;
+      text-align: center;
+      padding: 18/100rem 0;
+      font-size: @font-size-h6;
+      background: @gray-lighter;
+      color: @brand-primary;
+
+    }
+
+  }
+
+}
+
+.tab-wrap {
+
+  &.full-tab {
+    width: 100%;
+    margin: 0;
+
+    .v-tab {
+      .tab-item {
+        border-radius: 0;
+        border: none;
+        border-bottom: 10/100rem solid #fff;
+
+        &:first-child, &:last-child {
+          border-radius: 0;
+          a {
+            border-radius: 0;
+          }
+        }
+
+        &.active{
+          background: #fff;
+          border-bottom: 10/100rem solid @brand-primary;
+        }
+
+        &.active a{
+          color: @brand-primary;
+          background: #fff;
+        }
+
+        a{
+          display: block;
+          text-align: center;
+          padding:40/100rem 0;
+          font-size: @font-size-h6;
+          color: @gray-dark;
+        }
+
+      }
+    }
+
+  }
+
+  &:after {
+    .Pseudo-border-after();
+  }
+
+}

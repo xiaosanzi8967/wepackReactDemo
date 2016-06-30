@@ -1,0 +1,35 @@
+@import "mixins/border-radius.less";
+
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+//头像
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+}
+
+//中等尺寸
+.avatar-md {
+  width: 2.18rem;
+  height: 2.18rem;
+  margin: 0 .58rem;
+}
+
+//大尺寸
+.avatar-lg {
+  width: 3rem;
+  height: 3rem;
+  //margin: 0 .58rem;
+}
+
+.avatar-radius {
+  .border-top-radius(100%);
+  .border-bottom-radius(100%);
+}

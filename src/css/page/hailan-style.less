@@ -1,0 +1,238 @@
+@import  '../_variables.less';
+//红包首页
+.hal-bg{
+  background: url("../../images/hailan/bg.png") no-repeat;
+  background-size:100% 100%;
+  display: none;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  overflow-y: auto;
+}
+.hal-bk{
+  position: absolute;
+  z-index: 3;
+  background: url("../../images/hailan/bk.png") no-repeat;
+  background-size:100% 100%;
+  display: block;
+  width:100%;
+  height:100%;
+  left:0;
+}
+.hal-bm-yun{
+  position: absolute;
+  background: url("../../images/hailan/bottom-yun.png") no-repeat;
+  background-size:100% 100%;
+  display: block;
+  z-index: 2;
+  width:100%;
+  height:209/32rem;
+  bottom:-10/32rem;
+  left:0;
+}
+.hal-bm-rem{
+  background: url("../../images/hailan/jb-rw.png") no-repeat;
+  background-size:100% 100%;
+  display: block;
+  width:640/32rem;
+  height:227/32rem;
+  margin-bottom:10/32rem;
+  position: relative;
+}
+.hal-home-con{
+  background: url("../../images/hailan/hbbg1.png") no-repeat;
+  background-size:100% 100%;
+  margin-top:20%;
+  height:701/32rem;
+  position: relative;
+  width: 80%;
+  margin-left:10%;
+}
+.hal-home-con .top{
+  background: url("../../images/hailan/text.png") no-repeat center top;
+  height:217/32rem;
+  background-size:90% 100%;
+  width:100%;
+  position: absolute;
+  top:-15/32rem;
+}
+.hal-home-con .touxiang{
+  width:100/32rem;
+  height:100/32rem;
+  padding:7/32rem;
+  background: #c30e18;
+  position: absolute;
+  top:274/32rem;
+  left:50%;
+  margin-left:-57/32rem;
+}
+.hal-home-con .touxiang img{
+  border-radius: 50%;
+  width:100%;
+  height:100%;
+  border:1px solid #b90000;
+}
+.hal-home-con .text{
+  width:90%;
+  height:118/32rem;
+  background: rgba(0,0,0,.1);
+  border:1px solid #ff6b66;
+  border-radius: 20/32rem;
+  position: absolute;
+  top:394/32rem;
+  left: 5%;
+}
+.hal-home-con .text h4{
+  font-size: 32/32rem;
+  padding:20/32rem 0 10/32rem 0;
+  color:#ffff00;
+  width:100%;
+  text-align: center;
+}
+.hal-home-con .text h5{
+  color:#fff;
+  font-size: 26/32rem;
+  text-align: center;
+  width:100%;
+}
+.hal-home-con .text h6{
+  color:#fff;
+  font-size: 26/32rem;
+  text-align: center;
+  width:100%;
+  line-height: 40/32rem;
+  padding-top:10/32rem;
+}
+.hal-home-con .btn{
+  width:402/32rem;
+  height:78/32rem;
+  position: absolute;
+  top:544/32rem;
+  left:50%;
+  margin-left:-201/32rem;
+  z-index: 9;
+}
+.hal-home-con .btn img{
+  width:100%;
+}
+.failure-con{
+  background: url("../../images/hailan/hbbg2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.failure-con .text{
+  top:464/32rem;
+}
+.failure-con .touxiang{
+  top:300/32rem;
+}
+.hal-home-con .bhx{
+  height:160/32rem;
+  width:308/32rem;
+  background: url("../../images/hailan/bhx.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left:50%;
+  margin-left:-154/32rem;
+  top:100/32rem;
+}
+.hal-home-con .money{
+  height:160/32rem;
+  line-height: 160/32rem;
+  text-align: center;
+  width:100%;
+  font-size: 80/32rem;
+  font-weight: bold;
+  color:#ff9f00;
+  position: absolute;
+  top:100/32rem;
+}
+.failure-con .text2{
+  top:474/32rem;
+}
+
+/*.share{
+  position: fixed;
+  top:0;
+  height:100%;
+  background: rgba(0,0,0,0.6);
+  width:100%;
+  z-index: 99999;
+  visibility: hidden;
+  img{
+    width: 90%;
+    right: 3%;
+    position: absolute;
+  }
+
+  &.show{
+    visibility: visible;
+  }
+
+}*/
+.suipian{
+  position: absolute;
+  top: 3%;
+  width: 90%;
+  left: 5%;
+  z-index: 9;
+  height:244/32rem;
+  background: url("../../images/hailan/suipian.png") no-repeat;
+  background-size: 100% 100%;
+}
+.show{
+  display: block;
+}
+@media screen and (min-height: 500px) {
+  .hal-bm-rem{
+    width: 100%;
+    margin:0;
+    height: 7.09375rem;
+    position: absolute;
+    bottom: 0;
+  }
+  .success .text{
+    top:464/32rem;
+  }
+  .hal-home-con .btn{
+    top:550/32rem;
+  }
+  .hal-bm-yun{
+    bottom:0;
+  }
+}
+@media screen and (min-height: 600px) {
+  .hal-home-con {
+    margin-top:25%;
+    height:901/32rem;
+  }
+  .hal-home-con .top{
+      height:248/32rem;
+  }
+  .hal-home-con .touxiang{
+    top:374/32rem;
+  }
+  .hal-home-con .text{
+    width: 80%;
+    left: 10%;
+    top:520/32rem;
+  }
+  .hal-home-con .btn{
+    top:700/32rem;
+  }
+  .hal-home-con .bhx{
+    top:150/32rem;
+  }
+  .failure-con .touxiang{
+    top:400/32rem;
+  }
+  .failure-con .text{
+    top:620/32rem;
+  }
+  .hal-home-con .money{
+    top:150/32rem;
+  }
+  .success .text{
+    top:620/32rem;
+  }
+}

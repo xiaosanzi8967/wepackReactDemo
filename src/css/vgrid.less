@@ -1,0 +1,47 @@
+@import 'mixins/vgrid.less';
+@import 'mixins/clearfix.less';
+
+.show-vgrid {
+  margin-bottom: .9rem;
+}
+
+.v-row {
+  .make-row();
+  .clearfix();
+}
+
+
+
+.make-vgrid-columns();
+
+.make-grid(xs);
+
+//table-grid
+.make-grid-table();
+
+/*// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+  .make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+  .make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .make-grid(lg);
+}*/

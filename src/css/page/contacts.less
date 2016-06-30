@@ -1,0 +1,652 @@
+@import '../_variables.less';
+@import '../mixins/utilities.less';
+@import 'global_mixins.less';
+@import 'global_varibles.less';
+/* 人员详情 */
+.contacts-memberDetail-photo{
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: .3rem;
+  position: relative;
+}
+.contacts-memberDetail-photo:before{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0,0,0,.8);
+  left: 0;
+  top:0;
+  bottom: 0;
+  right: 0;
+}
+.contacts-memberDetail-photo .photo{
+  position: relative;
+  z-index: 3;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin:0.6rem auto 0;
+  background:#ccc;
+  border:2/100rem solid #fff;
+  overflow: hidden;
+  border-radius: .8rem;
+}
+.contacts-memberDetail-photo .photo img{
+  display: block;
+  width:100%;
+  height:auto;
+}
+.contacts-memberDetail-photo h2{
+  position: relative;
+  margin-top: .3rem;
+  z-index: 3;
+  width: 100%;
+  padding-left: .35rem;
+  font-size: 16px;
+  color:#fff;
+  text-align: center;
+  font-weight: normal;
+  i.icon-nan01fuzhi{
+    color: #20affe;
+  }
+  i.icon-nv01fuzhi{
+    color: #ed528c;
+  }
+}
+.contacts-memberDetail-photo h2 + h2{
+  padding-left: 0;
+  margin-top: .15rem;
+  font-size: 12px;
+}
+.contacts-memberDetail-photo .job-name{
+  position: relative;
+  z-index: 3;
+  margin-top: .15rem;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-weight: normal;
+}
+.contacts-memberDetail-photo h3{
+  display: inline-block;
+  vertical-align: middle;
+  padding:6/100rem .23rem;
+  border-radius: .28rem;
+  background:#000;
+  font-size: 12px;
+  color:#bdbdbd;
+}
+.contacts-memberDetail-msg {
+  overflow: hidden;
+  padding-bottom: .5rem;
+  .weui_cells{
+    margin-top: .2rem;
+    padding: 0 .2rem;
+    overflow: hidden;
+    &after{
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      border-top: 1px solid #D9D9D9;
+      color: #D9D9D9;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+}
+.contacts-memberDetail-msg .weui_cell{
+  margin: 0;
+  padding: .22rem 0;
+  .weui_cell_hd{
+    i{
+      color: #777;
+    }
+  }
+  .weui_cell_bd{
+    padding-left: .3rem;
+  }
+  h4{
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+    padding-bottom: .08rem;
+  }
+  p{
+    font-size: 16px;
+    color: #333;
+    line-height: normal;
+    /*overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;*/
+    a{
+      color:#333;
+      &active{
+        color:#333;
+      }
+      &hover{
+        color:#333;
+      }
+    }
+  }
+}
+.contacts-memberDetail-msg .weui_cell:before{
+  left:0;
+}
+.contacts-memberDetail-op{
+  padding-bottom: .8rem;
+  .weui_mask{
+    z-index: 10;
+  }
+  .guide{
+    width: 5.19rem;
+    height: 2.85rem;
+    position: fixed;
+    z-index: 13;
+    top:.33rem;
+    left:.82rem;
+  }
+  .contacts-memberDetail-btn{
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    z-index: 6;
+    padding:.2rem 0;
+    background-color: #fff;
+    .weui_btn{
+      height: .6rem;
+      line-height: .6rem;
+      padding:0;
+      width: 100%;  /* 暂时一个按钮 */
+      float: none;
+      font-size: 17px;
+      background-color: #fff;
+      border:0;
+      color:#1FAFFF;
+      position: relative;
+      i{
+        font-size: 22px;
+      }
+    }
+    .weui_btn + .weui_btn{
+      margin-top: 0;
+    }
+  }
+}
+.contacts-memberDetail-btn .weui_btn + .weui_btn:before{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 200%;
+  border-left: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.contacts-memberDetail-btn .weui_btn:after{
+  border: 0;
+}
+.contacts-memberDetail-btn:before{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.contacts-memberDetail-weixin{
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  margin:.2rem 0;
+  padding:.2rem .4rem;
+  .weui_cell{
+    padding:0;
+    .weui_cell_hd{
+      width: 2.6rem;
+      height: 2.6rem;
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .weui_cell_bd{
+      text-align: center;
+      color:#333;
+      img{
+        display: inline-block;
+        width: .8rem;
+        height: .8rem;
+      }
+      h4{
+        padding: .4rem 0 .15rem;
+        font-size: 14px;
+        font-weight: normal;
+      }
+      p{
+        font-size: 11px;
+      }
+    }
+  }
+  &before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+  &after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+
+
+/* 人员列表 */
+.contacts-memberList{
+  padding-bottom: .2rem;
+  overflow: hidden;
+}
+.contacts-memberList-con h2{
+  height: .44rem;
+  line-height: .44rem;
+  font-size: 13px;
+  color: #999;
+  padding-left: .2rem;
+  font-weight: normal;
+}
+.contacts-memberList-con .weui_cells li{
+  position: relative;
+  overflow: hidden;
+}
+.contacts-memberList-con .weui_cells li:before{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.contacts-memberList-con .weui_cells li:first-child:before{
+  height: 0;
+  border-top: 0;
+}
+.contacts-memberList-con .weui_cells{
+  overflow: hidden;
+  background:#fff;
+  margin-top: 0;
+  padding: 0 .2rem;
+  .weui_cell{
+    padding:.2rem 0;
+    color:#333;
+    .weui_cell_hd{
+      width: .72rem;
+      height: .72rem;
+      img{
+        display: block;
+        width: .72rem;
+        height: .72rem;
+      }
+    }
+    .weui_cell_bd{
+      padding:0 .3rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 16px;
+    }
+    .weui_cell_ft{
+      color:#999;
+      font-size: 13px;
+      width: 1.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+/* 部门 */
+.contacts-departmentList{
+  padding-bottom: .2rem;
+  overflow: hidden;
+}
+.contacts-department-con{
+  overflow: hidden;
+  background:#fff;
+  padding:0 .2rem;
+  position: relative;
+}
+.contacts-department-con:before{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.contacts-department-con > li:last-child > .weui_cell:after{
+  border-color: transparent;
+}
+.contacts-department-con:after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  -ms-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.contacts-department-con:first-child{
+  margin-bottom: .2rem;
+}
+.contacts-department-con li ul{
+  display: block;  /* 默认none */
+}
+.contacts-department-con li .weui_cell{
+  padding:.3rem 0;
+  width: auto;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  .weui_cell_hd{
+    width: .4rem;
+    i{
+      color: #b3b3b3;
+      display: inline-block;
+    }
+  }
+  .weui_cell_bd{
+    h2{
+      font-size: 16px;
+      color: #333;
+      font-weight: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .weui_cell_ft{
+    color: #999;
+    font-size: 12px;
+    min-width: 1rem;
+    i{
+      font-size: 14px;
+      color: #b3b3b3;
+    }
+  }
+}
+.contacts-department-con li .weui_cell_hd i:before{
+  content: '\e62c';
+}
+.contacts-department-con li .weui_cell.active{
+  background:#dadbdc;
+  padding:.3rem .2rem .3rem .4rem;
+  position: relative;
+  z-index: 2;
+}
+.contacts-department-con li .weui_cell_hd i.active:before{
+    content: '\e62e';
+}
+.contacts-department-con li .weui_cell.active .weui_cell_hd i.active{
+  color: #333;
+}
+.contacts-department-con > li > .weui_cell.active{
+  padding:.3rem .2rem;
+}
+.contacts-department-con .weui_cell:after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  -ms-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.contacts-department-con li ul{
+  position: relative;
+  background-color: #f7f7f7;
+}
+.contacts-department-con li ul:before{
+  content: '';
+  display: block;
+  width: .2rem;
+  height: 100%;
+  background-color: #f7f7f7;
+  position: absolute;
+  z-index:1;
+  top: 0;
+  left: -.2rem;
+}
+.contacts-department-con li ul:after{
+  content: '';
+  display: block;
+  width: .2rem;
+  height: 100%;
+  background-color: #f7f7f7;
+  position: absolute;
+  z-index:1;
+  top: 0;
+  right: -.2rem;
+}
+.contacts-department-con li ul li{
+  padding-left: .3rem;
+}
+
+/* 全局搜索 */
+.contacts-search-dialog{
+  .weui_mask{
+    display: none;
+    z-index: 3;
+  }
+}
+.contacts-search{
+  height: .88rem;
+  position: relative;  /* 默认relative 暂不fixed */
+  z-index: 13;
+  left:0;
+  top:0;
+  width: 100%;
+  padding: .15rem .2rem;
+  overflow: hidden;
+  background-color: #DADBDC;
+}
+.contacts-search .weui_cell{
+  padding:0;
+  overflow: hidden;
+  .weui_cell_hd{
+    width: .6rem;
+    height: .56rem;
+    line-height: .56rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: .08rem 0 0 .08rem;
+  }
+  .weui_cell_bd{
+    input{
+      height: .56rem;
+      line-height: .56rem;
+      font-size: 14px;
+      background-color: #fff;
+      border-radius:0 .08rem .08rem 0;
+      -webkit-transition: width .3s;
+      transition: width .3s;
+    }
+    button{
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: .9rem;
+      height: .56rem;
+      line-height: .56rem;
+      padding: 0;
+      border:0;
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      -webkit-transition: -webkit-transform .3s;
+      transition: transform .3s;
+      font-size: 16px;
+      color: #20AFFE;
+      text-align: center;
+      background: transparent;
+    }
+    .weui_btn + .weui_btn{
+      margin-top: 0;
+      background-color: #20AFFE;
+      color: #fff;
+    }
+  }
+}
+
+.contacts-search .weui_cell_bd input.active{
+  width: 80%;
+}
+.contacts-search .weui_cell_bd .weui_btn:after{
+  border-width: 0;
+}
+.contacts-search .weui_cell_bd button.active{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.contacts-search-index{
+  position: absolute;
+  left: 0;
+  top: .88rem;
+  z-index: 12;
+  width: 100%;
+  padding: .2rem 0 0 .2rem;
+  background-color: #fff;
+  overflow: hidden;
+  -webkit-transform: translateY(-125%);
+  transform: translateY(-125%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  a{
+    float: left;
+    display: block;
+    overflow: hidden;
+    width: .68rem;
+    height: .68rem;
+    line-height: .68rem;
+    margin: 0 .2rem .2rem 0;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    border-radius: .08rem;
+    background-color: #fff;
+  }
+}
+.contacts-search-index a:last-child{
+  font-size: 14px;
+  width: auto;
+  margin-left: .64rem;
+  padding: 0 .17rem;
+
+}
+.contacts-search-index a:active,.contacts-search-index a:focus,.contacts-search-index a:hover{
+  color: #fff;
+  background-color: #20AFFE;
+}
+.contacts-search-index.active{
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* 全局404 */
+.contacts-404{
+  overflow: hidden;
+  text-align: center;
+  img{
+    display: block;
+    width: 2.92rem;
+    height: 2rem;
+    margin: 1rem auto 0;
+  }
+  h2{
+    font-size: 16px;
+    font-weight: normal;
+    color: #777;
+    padding:.7rem 0 .2rem ;
+  }
+  p{
+    font-size: 12px;
+    color: #999;
+  }
+}
+.contacts-department-con li .weui_cell .weui_cell_ft_fd {
+  color: #999;
+  position: absolute;
+  font-size: 12px;
+  right:0;
+  width:100%;
+  min-width: 2rem;
+  i {
+    font-size: 14px;
+    color: #b3b3b3;
+  }
+}

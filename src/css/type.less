@@ -1,0 +1,64 @@
+@import '_variables.less';
+@import 'mixins/utilities.less';
+
+
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+@media screen and (max-width: 321px) {
+  h1, .h1 { font-size: @font-size-h1; }
+  h2, .h2 { font-size: @font-size-h2; }
+  h3, .h3 { font-size: @font-size-h3; }
+  h4, .h4 { font-size: @font-size-h4; }
+  h5, .h5 { font-size: @font-size-h5; }
+  h6, .h6 { font-size: @font-size-h6; }
+}
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  h1, .h1 { font-size: @font-size-h1 + 1; }
+  h2, .h2 { font-size: @font-size-h2 + 1; }
+  h3, .h3 { font-size: @font-size-h3 + 1; }
+  h4, .h4 { font-size: @font-size-h4 + 1; }
+  h5, .h5 { font-size: @font-size-h5 + 1; }
+  h6, .h6 { font-size: @font-size-h6 + 1; }
+}
+
+@media screen and (min-width: 400px) {
+  h1, .h1 { font-size: @font-size-h1 + 2; }
+  h2, .h2 { font-size: @font-size-h2 + 2; }
+  h3, .h3 { font-size: @font-size-h3 + 2; }
+  h4, .h4 { font-size: @font-size-h4 + 2; }
+  h5, .h5 { font-size: @font-size-h5 + 2; }
+  h6, .h6 { font-size: @font-size-h6 + 2; }
+}
+
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+.vertical-top        { vertical-align: top; }
+.vertical-middle     { vertical-align: middle; }
+.vertical-bottom     { vertical-align: bottom; }
+
+header, .header {
+  position: relative;
+  padding: unit( (@padding-base-vertical/ @font-size-root ), rem) 0 ;
+  background: @header-bg;
+  text-align: center;
+}
+
+.center-wrap {
+  .size(40%);
+  margin: 0 auto;
+}
+
+.a-icon-clr {
+  color: #999;
+}

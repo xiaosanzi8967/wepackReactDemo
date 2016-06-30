@@ -1,0 +1,36 @@
+@import "../_variables.less";
+
+.size (@width:100%, @height:100%) {
+  width: @width;
+  height: @height;
+}
+
+
+// 为标签做border线
+.Pseudo-border-after(@color: @hr-border-color) {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: @color;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+}
+
+.Pseudo-border-before(@color: @hr-border-color) {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: @color;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+}

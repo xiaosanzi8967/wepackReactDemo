@@ -1,0 +1,124 @@
+//body background
+@body-background:           #f4f4f4;
+@body-background-color:#fff;
+
+//fontSize base
+@font-size-root:            16px;
+
+@font-size-base:            16px;
+
+@font-size-small:           .75rem;
+
+//font size
+@font-size-h1:              24px;
+@font-size-h2:              21px;
+@font-size-h3:              18px;
+@font-size-h4:              16px;
+@font-size-h5:              14px;
+@font-size-h6:              12px;
+
+//font color
+@gray-base:                 #000;
+@gray-dark:                 lighten(@gray-base, 20%);   // #333
+@gray:                      lighten(@gray-base, 46.7%); // #777
+@gray-light:                lighten(@gray-base, 80%); // #ccc
+@gray-lighter:              lighten(@gray-base, 100%); // #fff
+
+
+//brand color
+@brand-primary:             #1eafff;
+@brand-warning:             #ff2222;
+@brand-success:             #ff8a2b;
+
+//Global text color on `<body>`.
+@text-color:                @gray-dark;
+
+
+//Font
+@font-family-sans-serif:    "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+@display-weight:             300;
+
+
+
+@border-width:               .0625rem;
+@hr-border-color:            #d5d5d5;
+@hr-border-width:            @border-width;
+
+
+//grid arguments
+@grid-columns:               12;
+@grid-gutter-width:          1.9rem;
+
+
+@line-height-base:           1.25; // 20/16
+@line-height-computed:       floor((@font-size-base * @line-height-base)); // ~20px
+
+@line-height-small:          1.5;
+
+
+@padding-base-vertical:      11/100rem;
+@padding-base-horizontal:    22/100rem;
+
+
+@padding-xs-vertical:        4/100rem;
+@padding-xs-horizontal:      10/100rem;
+
+
+@padding-large-vertical:      18/100rem;
+@padding-large-horizontal:    10/100rem;
+
+
+
+/*list*/
+@list-vertical-padding:         .625rem;
+@list-height-base:              unit( (@line-height-computed + (@list-vertical-padding * 2) + 2) / 2, rem);
+
+
+
+/*button*/
+@btn-default-color:             @gray-dark;
+@btn-default-bg:                @gray-lighter;
+@btn-default-border:            @gray-light;
+
+@btn-primary-color:             @gray-lighter;
+@btn-primary-bg:                @brand-primary;
+@btn-primary-border:            @brand-primary;
+
+
+//Button Size
+@btn-padding-base-vertical:     unit( (@padding-base-vertical/ @font-size-root ), rem);
+@btn-padding-base-horizontal:   unit( (@padding-base-horizontal/ @font-size-root ), rem);
+@btn-padding-xs-vertical:       unit( (@padding-xs-vertical/ @font-size-root ), rem);
+@btn-padding-xs-horizontal:     unit( (@padding-xs-horizontal/ @font-size-root ), rem);
+
+@border-radius-base:        	4/100rem;
+@border-radius-large:       	6/100rem;
+@border-radius-small:       	3/100rem;
+
+
+/* Tab */
+@tab-active-color:              @brand-primary;
+@tab-border-color:              @brand-primary;
+
+@tab-border-radius:             @border-radius-base;
+
+
+@form-group-margin-bottom:      .625rem;
+@input-background-color:        @body-background;
+
+
+
+//** Load fonts from this directory.
+@icon-font-path:                "../fonts/";
+//** File name for all font files.
+@icon-font-name:                "iconfont";
+
+
+//header
+@header-bg:                     @gray-lighter;
+
+
+
+@select-arrow-color: #00a5ff;

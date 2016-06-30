@@ -1,0 +1,44 @@
+@import 'mixins/clearfix.less';
+@import 'mixins/text-overflow.less';
+
+
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+
+.overflowY_hidden {
+  overflow-y: hidden;
+}
+
+
+.clearfix {
+  .clearfix();
+}
+
+.ellipsis {
+  .text-overflow();
+}
+
+.word-break {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+
+.affix {
+  position: fixed;
+}
